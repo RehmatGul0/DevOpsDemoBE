@@ -13,6 +13,8 @@ RUN npm install
 # Copy the rest of the application to the container
 COPY . .
 
+RUN npm cache clean --force
+
 # Migrate the database
 RUN npx prisma generate
 
