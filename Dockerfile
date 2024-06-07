@@ -13,8 +13,10 @@ RUN npm install
 # Copy the rest of the application to the container
 COPY . .
 
+RUN npm install -g dotenv-cli
+
 # Migrate the database
-RUN npx prisma migrate deploy
+RUN dotenv -e .env -- npx prisma migrate deploy
 
 # Run the app
 RUN npm run start
