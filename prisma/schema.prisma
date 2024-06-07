@@ -10,7 +10,7 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url      = env("DATABASE_URL")
+  url      = "postgresql://my-psql-rds-instance.cxok648kyf6n.us-east-1.rds.amazonaws.com"
 }
 
 
