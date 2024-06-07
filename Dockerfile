@@ -14,7 +14,7 @@ RUN npm install
 COPY . .
 
 # Migrate the database
-RUN dotenv -e .env -- npx prisma migrate deploy
+RUN npx prisma migrate deploy
 
 # Run the app
 RUN npm run start

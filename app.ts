@@ -1,6 +1,8 @@
 import express from 'express'
 import bodyParser from 'body-parser';
 import coursesRouter from './routes/courses-routes';
+import { config } from 'dotenv'
+config({ path: '.env' })
 
 
 const PORT = 5000;
