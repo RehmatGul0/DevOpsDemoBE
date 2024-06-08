@@ -14,10 +14,7 @@ RUN npm install
 COPY . .
 
 # # Migrate the database
-RUN  npx prisma migrate deploy --preview-feature
-
-# Run the app
-RUN npm run start
+RUN  node --stack-size=8192 node_modules/.bin/prisma migrate deploy --preview-feature
 
 # Expose port 5000
 EXPOSE 5000
