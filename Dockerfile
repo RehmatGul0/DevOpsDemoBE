@@ -14,7 +14,7 @@ RUN npm install
 COPY . .
 
 # # Migrate the database
-RUN node_modules/.bin/prisma generate --preview-feature
+RUN node_modules/.bin/prisma generate --schema=./schema.prisma
 
 # Expose port 5000
 EXPOSE 5000
