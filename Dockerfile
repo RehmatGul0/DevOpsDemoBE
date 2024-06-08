@@ -13,7 +13,7 @@ RUN npm install
 # Copy the rest of the application to the container
 COPY . .
 
-RUN node --stack-size=12288
+RUN node --stack-size=16384
 
 # # Migrate the database
 RUN node_modules/.bin/prisma generate --schema=./prisma/schema.prisma --generator client
