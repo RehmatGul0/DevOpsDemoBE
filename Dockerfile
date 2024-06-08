@@ -14,7 +14,7 @@ COPY . .
 RUN npm install
 
 # # Migrate the database
-RUN node --stack-size=7168 node_modules/.bin/prisma generate --schema=./prisma/schema.prisma --generator client
+RUN npx --schema=./prisma/schema.prisma --generator client
 
 # Expose port 5000
 EXPOSE 5000
