@@ -14,9 +14,9 @@ datasource db {
 }
 
 
-model Course {
+model course {
   id        String     @id @default(uuid())
   title     String
   description   String?
-  createdAt DateTime @default(now())
+  createdat DateTime @default(now())
 }
