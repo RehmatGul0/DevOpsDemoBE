@@ -13,8 +13,8 @@ RUN npm install
 # Copy the rest of the application to the container
 COPY . .
 
-# Migrate the database
-RUN npx prisma migrate deploy
+# # Migrate the database
+RUN  npx prisma migrate deploy --preview-feature
 
 # Run the app
 RUN npm run start

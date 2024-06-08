@@ -1,4 +1,5 @@
-CREATE TABLE IF NOT EXISTS "course" (
+-- CreateTable
+CREATE TABLE "course" IF NOT EXISTS  (
     "id" TEXT NOT NULL,
     "title" TEXT NOT NULL,
     "content" TEXT,
