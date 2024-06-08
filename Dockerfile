@@ -4,17 +4,17 @@ FROM node:20
 # Set working directory
 WORKDIR /app
 
-# Copy package.json and package-lock.json to container
-COPY package*.json ./
-
-# Install dependencies
-RUN npm install
+# # Copy package.json and package-lock.json to container
+# COPY package*.json ./
 
 # Copy the rest of the application to the container
 COPY . .
 
+# Install dependencies
+RUN npm install
+
 # # Migrate the database
-RUN node --stack-size=8192 node_modules/.bin/prisma generate --schema=./prisma/schema.prisma --generator client
+RUN node --stack-size=7168 node_modules/.bin/prisma generate --schema=./prisma/schema.prisma --generator client
 
 # Expose port 5000
 EXPOSE 5000
